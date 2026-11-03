@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    float minsize = 0.5f;
-    float maxsize = 2.0f;
+    public float minsize = 0.5f;
+    public float maxsize = 2.0f;
     Rigidbody2D rb;
-    float minspeed = 50f;
-    float maxspeed = 150f;
+    
+    public float minspeed = 50f;
+    public float maxspeed = 150f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,7 +17,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         float randomspeed = Random.Range(minspeed, maxspeed);
-        rb.AddForce(Vector2.right * 100);
+        Vector2 randomDirection = Random.insideUnitCircle;
+        rb.AddForce(randomDirection * randomspeed);
     }   
 
     // Update is called once per frame
