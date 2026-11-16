@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class obstacle : MonoBehaviour
 {
     public float minsize = 0.5f;
     public float maxsize = 2.0f;
