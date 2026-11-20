@@ -119,6 +119,61 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &9711802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9711804}
+  - component: {fileID: 9711803}
+  m_Layer: 5
+  m_Name: gameUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &9711803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9711802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 5263240b8034b834bb81190d9269945c, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: a8f8fb4f3c1b55447a780adbfabcf83d, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!4 &9711804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9711802}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &93900952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -871,6 +926,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3018b6122e7f8d048a1bee7409120758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::player
+  scoreMultiplier: 10
+  thrustForce: 1
+  uiDocument: {fileID: 0}
+  explosionEffect: {fileID: 0}
 --- !u!1 &1143089577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1223,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3018b6122e7f8d048a1bee7409120758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::player
+  scoreMultiplier: 10
+  thrustForce: 1
+  uiDocument: {fileID: 0}
+  explosionEffect: {fileID: 0}
 --- !u!1 &1425869704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,7 +1534,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3018b6122e7f8d048a1bee7409120758, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::player
+  m_EditorClassIdentifier: Assembly-CSharp::playerController
+  scoreMultiplier: 1
+  thrustForce: 5
+  uiDocument: {fileID: 9711803}
+  explosionEffect: {fileID: 2355573471484193165, guid: 9cbf2f159371ffb40b163cde8f721faf, type: 3}
 --- !u!4 &1636960622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5128014232644091496, guid: 5e73dfb0f2f0a0545a5889476f286d9a, type: 3}
@@ -1912,6 +1979,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3018b6122e7f8d048a1bee7409120758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::player
+  scoreMultiplier: 10
+  thrustForce: 1
+  uiDocument: {fileID: 0}
+  explosionEffect: {fileID: 0}
 --- !u!1001 &379969058835349614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2009,3 +2080,4 @@ SceneRoots:
   - {fileID: 241048501}
   - {fileID: 379969058835349614}
   - {fileID: 1616856062}
+  - {fileID: 9711804}
